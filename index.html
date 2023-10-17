@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>crudTest</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container p-4">
+        <label for="productName">productName</label>
+        <input class="form-control mt-2" id="productName" type="text">
+
+        
+        <label class="mt-4" for="productPrice">productPrice</label>
+        <input class="form-control mt-2" id="productPrice" type="text">
+
+        <label class="mt-4" for="productCategory">category</label>
+        <input class="form-control mt-2" id="productCategory" type="text">
+
+        <label class="mt-4" for="productDesc">Desc</label>
+        <textarea class="form-control mt-2" id="productDesc" rows="5" type="text"></textarea>
+
+        <button onclick="addProduct()" id="addProduct" class=" d-block btn btn-primary mt-4">addProduct</button>
+        <button onclick="udateProduct()"   id="udateProduct" class="btn btn-outline-warning d-none mt-4 ">udateProduct</button>
+    </div>
+
+    <input oninput="searchProduct(this.value)" id="search" class=" w-75 form-control mb-3 container" type="text" placeholder="search....">
+
+
+
+    <table class="table container text-center">
+        <thead>
+            <th>name</th>
+            <th>price</th>
+            <th>category</th>
+            <th>Desc</th>
+            <th>update</th>
+            <th>delete</th>
+        </thead>
+        <tbody id="data">
+            
+        </tbody>
+
+    </table>
+    
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
